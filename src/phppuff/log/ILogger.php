@@ -12,6 +12,12 @@ namespace phppuff\log;
 interface ILogger {
 
     /**
+     * @param boolean $refresh
+     * @return string
+     */
+    public function getLogId($refresh = false);
+
+    /**
      * @param string $msg
      * @param null $category [optional]
      * @param int  $backtrace [optional]

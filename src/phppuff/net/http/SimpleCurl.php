@@ -6,7 +6,7 @@
  * Time: 11:27
  */
 
-namespace phppuff\web\http;
+namespace phppuff\net\http;
 
 
 use phppuff\LoggerFactory;

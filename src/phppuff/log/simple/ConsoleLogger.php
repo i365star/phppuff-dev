@@ -20,10 +20,7 @@ class ConsoleLogger extends AbstractLogger implements ILogger {
     const TRACE = 'TRACE';
     const DEBUG = 'DEBUG';
 
-    protected function log($level, $msg, $category = null, $backtrace = 0) {
-        empty($category) && $category = static::DEFAULT_CATEGORY;
-        $text = $this->format($msg, $level, $category);
-
+    protected function write($text, $level = null) {
         $stdStream = null;
         switch ($level){
             case static::WARN:
@@ -39,10 +36,8 @@ class ConsoleLogger extends AbstractLogger implements ILogger {
         fwrite($stdStream, $text);
     }
 
-    protected function format($message,$level,$category){
-        $pid = posix_getpid();
-        list($uSecond, $time) = explode(' ', microtime());
-        return @date('Y/m/d H:i:s',$time) . "." . str_pad(round($uSecond * 1000), 3, 0, STR_PAD_LEFT) ." [$pid] [$level] [$category] $message\n";
+    public function getLogId($refresh = false) {
+        return posix_getpid();
     }
 
 }

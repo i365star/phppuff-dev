@@ -3,15 +3,14 @@
  * Created by PhpStorm.
  * User: nova
  * Date: 2016/12/17
- * Time: 0:52
+ * Time: 0:31
  */
 
-namespace phppuff\web\sdk;
+namespace phppuff\net\http;
 
 
 use phppuff\error\Exception;
 
-class SdkException extends Exception {
-
+class CurlException extends Exception {
 
 }

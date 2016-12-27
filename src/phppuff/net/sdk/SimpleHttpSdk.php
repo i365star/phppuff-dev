@@ -6,7 +6,7 @@
  * Time: 0:38
  */
 
-namespace phppuff\web\sdk;
+namespace phppuff\net\sdk;
 
 
 use phppuff\LoggerFactory;

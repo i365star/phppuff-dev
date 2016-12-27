@@ -12,8 +12,8 @@ use phppuff\log\ILogger;
 
 class IdleLogger extends AbstractLogger implements ILogger {
 
-    protected function log($level, $msg, $category = null, $backtrace = 0) {
-        return ;
+    protected function write($text, $level = null) {
+        return true;
     }
 
 }

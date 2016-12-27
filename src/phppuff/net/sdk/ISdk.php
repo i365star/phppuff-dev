@@ -6,7 +6,7 @@
  * Date: 2016/12/17
  * Time: 0:26
  */
-namespace phppuff\web\sdk;
+namespace phppuff\net\sdk;
 
 interface ISdk {
 
